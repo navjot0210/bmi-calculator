@@ -83,6 +83,12 @@ parent element is provided, it defaults to the ```document``` object, meaning it
 the entire HTML document. The function then returns the first matching element found, or ```null``` 
 if no match is found.
 
+```JAVASCRIPT
+function select(selector, parent = document) {
+  return parent.querySelector(selector);
+}
+```
+
 2. calculateBMI Function: This function is executed when the 'click' event occurs on the button. It 
 performs the following steps:
 - It retrieves the user's weight and height from input fields in the HTML document.

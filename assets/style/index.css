@@ -83,3 +83,76 @@ input[type=button]:hover {
   margin-top: 20px;
   font-weight: bold;
 }
+
+/*-------------------------------------------------*/
+/* Media queries                                   */
+/*-------------------------------------------------*/
+@media (max-width: 991px) {
+  h2 {
+      font-size: 50px;
+  }
+  
+  p {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 45px;
+  }
+
+  p {
+  font-size: 20px;
+  }
+
+  .result, .comment {
+    font-size: 26px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+  main {
+    background: #191824 url('../media/banner.JPG') left / cover no-repeat;;
+  }
+}
+
+@media (max-width: 520px) {
+  h2 {
+    font-size: 40px;
+  }
+
+  p {
+  font-size: 18px;
+  }
+
+  form {
+    font-size: 22px;
+  }
+
+  input[type=text], input[type=button] {
+    height: 50px;
+    font-size: 20px;
+  }
+
+  input[type=text] {
+    width: 360px;
+  }
+
+  input[type=button] {
+    width: 110px;
+    height: 50px;
+  }
+
+  .result, .comment {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 398px) {
+  input[type=text] {
+    width: 100%;
+  }
+}
