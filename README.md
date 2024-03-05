@@ -12,12 +12,14 @@ classification based on the calculated BMI value.
 - Displays the calculated BMI value and category classification.
 - Provides basic input validation to ensure valid weight and height are entered.
 - Has a responsive design to adapt to any screen size.
-<br>
-The app is built using basic HTML, CSS and JavaScript. 
+
+The app is built using basic ```HTML``` , ```CSS``` and ```JavaScript``` . 
 
 ### Structure
 
-The main structure of the app consists of a basic head and body. It includes appropriate use of semantic elements such as ```<main>``` and ```<form>```. The ```<form>``` element comprises of two text boxes that takes input (height and weight) and a button to get the result.
+The main structure of the app consists of a basic head and body. It includes appropriate use of 
+semantic elements such as ```<main>``` and ```<form>```. The ```<form>``` element comprises of two 
+text boxes that takes input (height and weight) and a button to get the result.
 
 ```HTML
 <form>
@@ -31,7 +33,9 @@ The main structure of the app consists of a basic head and body. It includes app
 
 ### Style
 
-Every style aligns with the background and theme of the app. It has a themed background in blue and white. Most importantly, the inline form elements are displayed in block by making use of ```CSS``` display properties.
+Every style aligns with the background and theme of the app. It has a themed background in blue and 
+white. Most importantly, the inline form elements are displayed in block by making use of ```CSS``` 
+display properties.
 
 ```css
 input[type=text], input[type=button] {
@@ -66,11 +70,24 @@ input[type=button]:hover {
 ```
 
 ### Functionality
-The working of this application is entirely based on ```JavaScript``` functions. The code is designed and written in a way that it is easy to understand by the beginners. It initially validates the input via function followed by returning the appropriate output (BMI Value and category) upon clicking the calculate button via an event listener.
+The working of this application is entirely based on ```JavaScript``` functions. The code is 
+designed and written in a way that it is easy to understand by the beginners. It initially validates 
+the input via function followed by returning the appropriate output (BMI Value and category) upon 
+clicking the calculate button via an event listener.
 
-1. calculateBMI Function: This function is executed when the 'click' event occurs on the button. It performs the following steps:
+1. Utility function: The utility function, named ```select``` , allows to find and return the first 
+element within a specified parent element that matches the given CSS selector. It takes two 
+parameters: ```selector``` , which is the CSS selector used to select the desired element, and 
+```parent``` , which is the optional parent element within which to search for the element. If no 
+parent element is provided, it defaults to the ```document``` object, meaning it will search within 
+the entire HTML document. The function then returns the first matching element found, or ```null``` 
+if no match is found.
+
+2. calculateBMI Function: This function is executed when the 'click' event occurs on the button. It 
+performs the following steps:
 - It retrieves the user's weight and height from input fields in the HTML document.
-- It checks if the weight and height values are valid numbers and greater than zero. If not, it displays an error message asking the user to enter valid weight and height.
+- It checks if the weight and height values are valid numbers and greater than zero. If not, it 
+displays an error message asking the user to enter valid weight and height.
 - It converts the height from centimeters to meters by dividing it by 100.
 
 ```JAVASCRIPT
@@ -98,28 +115,33 @@ let cases = [
   ];
 ```
 
-- It finds the first object in the cases array where the condition is true for the calculated BMI value.
+- It finds the first object in the cases array where the condition is true for the calculated BMI 
+value.
 - It retrieves the category from the found object.
 
 ```JAVASCRIPT
 let category = cases.find(condition => condition.condition).category;
 ```
 
-- It updates the content of an element with the class 'result' to display the calculated BMI value and the corresponding category.
+- It updates the content of an element with the class 'result' to display the calculated BMI value 
+and the corresponding category.
 
 ```JAVASCRIPT
   value.textContent = `BMI = ${bmi.toFixed(2)}`;
   type.textContent = `You are ${category}`;
 ```
 
-2. Event Listener: An event listener is attached to the element with the class 'calculate'. It listens for a 'click' event on that element, and when the button is clicked, it calls the calculateBMI function.
+3. Event Listener: An event listener is attached to the element with the class 'calculate'. It 
+listens for a 'click' event on that element, and when the button is clicked, it calls the 
+calculateBMI function.
 ```JAVASCRIPT
 calculateButton.addEventListener('click', calculateBMI);
 ```
 
 ### Contributions
 
-Contributions are welcome! If you have any suggestions or improvements, feel free to open an issue or create a pull request.
+Contributions are welcome! If you have any suggestions or improvements, feel free to open an issue 
+or create a pull request.
 
 ## Demo
 Click [here](https://navjot0210.github.io/bmi-calculator/) to test the application.

@@ -1,12 +1,18 @@
 'use strict';
 
-const calculateButton = document.querySelector('.calculate');
-const value = document.querySelector('.result');
-const type = document.querySelector('.comment');
+// Utility function
+function select(selector, parent = document) {
+  return parent.querySelector(selector);
+}
 
+const calculateButton = select('.calculate');
+const value = select('.result');
+const type = select('.comment');
+
+// Function to calculate BMI
 function calculateBMI() {
-  let weight = parseFloat(document.querySelector('.weight').value);
-  let height = parseFloat(document.querySelector('.height').value) / 100; 
+  let weight = parseFloat(select('.weight').value);
+  let height = parseFloat(select('.height').value) / 100; 
   // divided by 100 to convert cm to meters
 
   if (isNaN(weight) || isNaN(height) || weight === 0 || height === 0) {
@@ -26,7 +32,7 @@ function calculateBMI() {
   let category = cases.find(condition => condition.condition).category;
 
   value.textContent = `BMI = ${bmi.toFixed(2)}`;
- type.textContent = `You are ${category}`;
+  type.textContent = `You are ${category}`;
 }
 
 calculateButton.addEventListener('click', calculateBMI);
