@@ -1,5 +1,5 @@
 
-## BMI Calculator App
+# BMI Calculator App
 
 This is a simple BMI (Body Mass Index) calculator app built using HTML, CSS, and JavaScript. It 
 allows users to calculate their BMI based on their weight and height and provides a category 
@@ -13,7 +13,7 @@ classification based on the calculated BMI value.
 - Provides basic input validation to ensure valid weight and height are entered.
 - Has a responsive design to adapt to any screen size.
 <br>
-The app is built using basic ```HTML```, ```CSS``` and ```JavaScript```. 
+The app is built using basic HTML, CSS and JavaScript. 
 
 ### Structure
 
@@ -47,7 +47,6 @@ input[type=text] {
   box-shadow: 0 0 1.5px 0.5px rgb(244 243 255 / 0.55);
   background-color: transparent;
   display: block;
-
 }
 
 input[type=button] {
@@ -117,3 +116,10 @@ let category = cases.find(condition => condition.condition).category;
 ```JAVASCRIPT
 calculateButton.addEventListener('click', calculateBMI);
 ```
+
+### Contributions
+
+Contributions are welcome! If you have any suggestions or improvements, feel free to open an issue or create a pull request.
+
+## Demo
+Click [here](https://navjot0210.github.io/bmi-calculator/) to test the application.
